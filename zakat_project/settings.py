@@ -12,14 +12,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
-# from dotenv import load_dotenv
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
+
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-jtd@74d9ob1an=t60z9fmtn54_otu!j%+6%1i9j#go($5@*g0='
@@ -28,8 +27,9 @@ SECRET_KEY = 'django-insecure-jtd@74d9ob1an=t60z9fmtn54_otu!j%+6%1i9j#go($5@*g0=
 DEBUG = True
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com' '*']
+
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com', '*']
 
 
 
@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     'beneficiaries',
     'corsheaders',
 ]
-CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins (not recommended for production)
+CORS_ALLOW_ALL_ORIGINS = True 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  #  React frontend URL
+    "http://localhost:3000",  
 ]
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-# CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins (for development)s
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,8 +86,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'zakat_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -97,8 +95,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -116,8 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
+
 
 LANGUAGE_CODE = 'en-us'
 

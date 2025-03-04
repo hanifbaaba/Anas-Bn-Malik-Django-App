@@ -16,9 +16,6 @@ class Beneficiary(models.Model):
     remarks = models.TextField(blank=True, null=True)
 
 
-    # gender = models.CharField(max_length=100, blank=True, null=True)
-    # need = models.CharField(max_length=100, blank=True, null=True)
-    # occupation = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.name
