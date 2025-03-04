@@ -18,3 +18,4 @@ def patch(self, request, *args, **kwargs):
         kwargs['partial'] = True  
         return self.update(request, *args, **kwargs)
 
+
