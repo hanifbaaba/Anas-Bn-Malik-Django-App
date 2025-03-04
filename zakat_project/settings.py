@@ -29,7 +29,7 @@ DEBUG = True
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'https://anas-bn-malik-django-app.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com' '*']
 
 
 
