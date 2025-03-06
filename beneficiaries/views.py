@@ -1,9 +1,7 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from rest_framework import generics
 from .models import Beneficiary
 from .serializers import BeneficiarySerializer
-
-
 
 class BeneficiaryListCreateView(generics.ListCreateAPIView):
     queryset = Beneficiary.objects.all()
@@ -14,8 +12,8 @@ class BeneficiaryRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView)
     serializer_class = BeneficiarySerializer
 
 
-def patch(self, request, *args, **kwargs):
-        kwargs['partial'] = True  
-        return self.update(request, *args, **kwargs)
+# def patch(self, request, *args, **kwargs):
+#         kwargs['partial'] = True  
+#         return self.update(request, *args, **kwargs)
 
 

@@ -21,17 +21,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jtd@74d9ob1an=t60z9fmtn54_otu!j%+6%1i9j#go($5@*g0='
+# SECRET_KEY = 'django-insecure-jtd@74d9ob1an=t60z9fmtn54_otu!j%+6%1i9j#go($5@*g0='
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-DEBUG = os.getenv("DEBUG", "True") == "True"
+# DEBUG = False
+# DEBUG = True
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com', '*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com', '*']
 
-
+# correct version before i push to production === ALLOWED_HOSTS = ['anas-bn-malik-django-app.onrender.com']
 
 
 INSTALLED_APPS = [
@@ -45,12 +48,17 @@ INSTALLED_APPS = [
     'beneficiaries',
     'corsheaders',
 ]
-CORS_ALLOW_ALL_ORIGINS = True 
+# CORS_ALLOW_ALL_ORIGINS = True 
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  
+    "https://anas-bn-malik-react-frontend.onrender.com",
 ]
 
+#  correct version before i push to production# # CORS_ALLOWED_ORIGINS = [
+      
+#     "https://anas-bn-malik-react-frontend.onrender.com"
+# ]
 
 
 MIDDLEWARE = [
@@ -125,12 +133,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # If you have a 'static' folder for development
-]
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),  # If you have a 'static' folder for development
+# ]
 
 
 # Default primary key field type
