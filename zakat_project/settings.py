@@ -26,15 +26,14 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
-# DEBUG = True
+DEBUG = True
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'anas-bn-malik-django-app.onrender.com', '*']
-
-# correct version before i push to production === ALLOWED_HOSTS = ['anas-bn-malik-django-app.onrender.com']
+ALLOWED_HOSTS = ['anas-bn-malik-django-app.onrender.com']
 
 
 INSTALLED_APPS = [
@@ -51,7 +50,7 @@ INSTALLED_APPS = [
 # CORS_ALLOW_ALL_ORIGINS = True 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  
+    # "http://localhost:3000",  
     "https://anas-bn-malik-react-frontend.onrender.com",
 ]
 
