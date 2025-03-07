@@ -138,6 +138,7 @@ USE_TZ = True
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static'),  # If you have a 'static' folder for development
 # ]
+STATIC_URL = '/static/'
 
 
 # Default primary key field type
