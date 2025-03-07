@@ -14,9 +14,9 @@ class Beneficiary(models.Model):
     mode_of_payment = models.CharField(max_length=100, blank=True, null=True)
     payment_officer = models.CharField(max_length=255, blank=True, null=True)
     remarks = models.TextField(blank=True, null=True)
-    gender = models.CharField(max_length=50, blank=True, null=True)  
-    need = models.CharField(max_length=255, blank=True, null=True)  
-    occupation = models.CharField(max_length=255, blank=True, null=True)  
+    # gender = models.CharField(max_length=50, blank=True, null=True)  
+    # need = models.CharField(max_length=255, blank=True, null=True)  
+    # occupation = models.CharField(max_length=255, blank=True, null=True)  
 
 
 
